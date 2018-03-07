@@ -14,8 +14,8 @@ export interface SwaggerBaseConfig {
         };
     };
     tags?: {
-      name: string,
-      description: string,
+        name: string,
+        description: string,
     }[];
     host?: string;
     basePath?: string;
@@ -25,11 +25,18 @@ export interface SwaggerBaseConfig {
     };
     schemes?: SwaggerScheme[];
     securityDefinitions?: {
-      bearer: {
-        type: 'apiKey',
-        name: string,
-        in: 'body' | 'query' | 'header',
-      },
+        bearer?: {
+            type: 'apiKey',
+            name: string,
+            in: 'body' | 'query' | 'header',
+        },
+        oauth2?: {
+            type: 'oauth2',
+            flow: 'implicit' | 'password' | 'application' | 'accessCode',
+            authorizationUrl?: string,
+            tokenUrl?: string,
+            scopes?: object,
+        },
     };
 }
 
