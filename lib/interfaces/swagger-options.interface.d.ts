@@ -1,11 +1,11 @@
 export interface SwaggerOptions {
-    validatorUrl: string,
+    validatorUrl: string;
     oauth: {
-        clientId: string,
+        clientId: string;
         clientSecret: string;
         realm: string;
         appName: string;
         scopeSeparator: string;
-        additionalQueryStringParams: any
-    }
+        additionalQueryStringParams: any;
+    };
 }
