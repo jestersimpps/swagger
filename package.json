@@ -1,9 +1,10 @@
 {
     "name": "@theledger/nestjs-swagger",
-    "version": "1.1.5",
+    "version": "1.1.7",
     "description": "Nest - modern, fast, powerful node.js web framework (@swagger)",
     "author": "Kamil Mysliwiec",
     "license": "MIT",
+    "main": "./lib/index.js",
     "scripts": {
         "build": "tsc -p tsconfig.json",
         "prepublish": "npm run build"
