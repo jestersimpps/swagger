@@ -1,8 +1,8 @@
-import { SwaggerOps } from './interfaces/swaggerops.interface';
 import * as swaggerUi from 'swagger-ui-express';
 import { INestApplication } from '@nestjs/common';
 import { SwaggerBaseConfig, SwaggerDocument } from './interfaces';
 import { SwaggerScanner } from './swagger-scanner';
+import { SwaggerCustomOptions } from './interfaces/swagger-custom-options.interface';
 
 export class SwaggerModule {
     private static readonly swaggerScanner = new SwaggerScanner();
@@ -20,8 +20,8 @@ export class SwaggerModule {
         path: string,
         app: INestApplication,
         document: SwaggerDocument,
-        ops: SwaggerOps = null
+        options?: SwaggerCustomOptions
     ) {
-        app.use(path, swaggerUi.serve, swaggerUi.setup(document, ops));
+        app.use(path, swaggerUi.serve, swaggerUi.setup(document, options));
     }
 }
