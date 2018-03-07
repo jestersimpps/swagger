@@ -9,12 +9,12 @@
     "experimentalDecorators": true,
     "target": "es6",
     "sourceMap": false,
-    "outDir": "./dist",
-    "rootDir": "./lib",
+    "outDir": "./lib",
+    "rootDir": "./src",
     "skipLibCheck": true
   },
   "include": [
-    "lib/**/*"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
